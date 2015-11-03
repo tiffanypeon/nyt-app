@@ -27,6 +27,9 @@ gem 'spring',        group: :development
 
 group :development, :test do 
   gem 'rspec-rails', '~> 3.0'
+  gem 'shoulda-matchers', '~> 3.0'
+  gem 'capybara', '~> 2.1'
+  gem 'poltergeist', '~> 1.7.0'
   gem 'pry-rails'
 end
 # Use ActiveModel has_secure_password
