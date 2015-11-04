@@ -31,6 +31,7 @@ group :development, :test do
   gem 'capybara', '~> 2.1'
   gem 'poltergeist', '~> 1.7.0'
   gem 'pry-rails'
+  gem 'selenium-webdriver', '~> 2.48'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,0 +1,16 @@
+<% @stories.each do |story| %>
+  <ul>
+    <li>
+      <%= link_to(story[1]['parameters']['title'], story[1]['parameters']['tinyUrl']) %> 
+    </li>
+    <li> 
+      <%= story[1]['parameters']['pubDate'] %> 
+    </li>
+    <li> 
+      <%= story[1]['parameters']['description'] %> 
+    </li>
+    <li> 
+      <%= story[1]['parameters']['pubDate'] %> 
+    </li>
+  </ul>
+<% end %> 
