@@ -6,3 +6,4 @@ class StoriesController < ApplicationController
     @stories = GetStories.call
   end
 end
+
