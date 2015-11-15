@@ -1,16 +1,16 @@
 <% @stories.each do |story| %>
   <ul>
     <li>
-      <%= link_to(story[1]['parameters']['title'], story[1]['parameters']['tinyUrl']) %> 
+      <%= link_to(story.headline, story.url) %> 
     </li>
     <li> 
-      <%= story[1]['parameters']['pubDate'] %> 
+      <%= story.last_published %> 
     </li>
     <li> 
-      <%= story[1]['parameters']['description'] %> 
+      <%= story.summary %> 
     </li>
     <li> 
-      <%= story[1]['parameters']['pubDate'] %> 
+      <%= story.byline %> 
     </li>
   </ul>
 <% end %> 

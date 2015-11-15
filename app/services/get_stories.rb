@@ -1,25 +1,24 @@
 class GetStories
   def self.call
-    stories = []
-    collections = []
-    stories_json #.merge(story_json['content'][2]) ? 
-    collections_json.each do |collection|
-      collections << collection['assets']  #if assets isn't nil 
+    articles = []
+    stories.each do |story|
+      articles << Story.new({
+        headline: story['headline'],
+        byline: story['byline'],
+        url: story['url'],
+        summary: story['summary'],
+        image: image_url(story),
+        last_published: story['lastPublished']
+      }
+      )
     end
-    collections.each do |collection|
-      binding.pry
-      if !collection.empty?
-        stories << Story.new(
-          headline: collection[0]['headline'],
-          byline: collection[0]['byline'],
-          url: collection[0]['url'],
-          summary: collection[0]['summary'],
-          image: image_param(collection),
-          last_published: collection[0]['lastPublished']
-        )
-      end
+    articles
+  end
+
+  def self.image_url(story)
+    unless story['images'].empty?
+      story['images'][0]['types'][0]['content'] 
     end
-    stories
   end
 
   def self.image_param(collection)
@@ -38,20 +37,30 @@ class GetStories
   end
 
   def self.contents
-    collections.each_with_index.map do |collection, i|
-      if !(collection[i].nil? || collection[i]['assets'].empty?)
-        collection[i]['assets']
+    contents = []
+    collections.each do |collection|
+      collection.each do |c|
+        if !(c.nil? || c['assets'].empty?)
+          contents << c['assets']
+        end
       end
     end
+    contents
   end
 
   def self.stories
     #loop through collections and grab only the ones that we want 
     #['assets'] isn't an empty array
     #['assets']['type'] is 'Article'
-    contents.compact.each_with_index.select do |content_details, i|
-      content_details[i]['type'] == 'Article'
+    articles = []
+    contents.compact.each do |content_details|
+      content_details.each do |content|
+        if content['type'] == 'Article'
+          articles << content
+        end
+      end
     end
+    articles
   end
 
 end
