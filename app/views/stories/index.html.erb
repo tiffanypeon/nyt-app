@@ -1,3 +1,8 @@
+<div> Choose your language
+  <%= link_to 'English', stories_path(language: 'english') %>
+  <%= link_to 'Martian', stories_path(language: 'martian') %>
+</div>
+
 <% @stories.each do |story| %>
   <ul>
     <li>
