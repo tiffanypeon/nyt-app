@@ -16,7 +16,7 @@ class ArticleFilter
   def collections_with_details
     response['content'].map do |content_block|
       unless content_block['collections'].empty?
-        content_block['collections'] 
+        content_block['collections']
       end
     end
   end

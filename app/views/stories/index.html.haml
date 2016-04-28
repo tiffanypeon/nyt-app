@@ -1,0 +1,37 @@
+#wrapper
+  %header
+    .nav
+      %ul.topnav
+        %li Home
+        %li Newest Stories
+        %li Martian
+
+  #main
+    %h1.page-title Today's Stories
+    .col-10
+      - @full_stories.each_slice(2) do |stories|
+        .row
+          - stories.each do |story|
+            .col-6
+              %p.headline
+                = link_to(story.headline, story.url)
+              %p.byline
+                = story.byline
+              %p.last-published
+                = story.last_published
+              .row.story-info
+                .col-5
+                  = image_tag(story.image)
+                .col-7
+                  %p.summary
+                    = story.summary
+    .col-2
+      - @other_stories.each do |story|
+        .row
+          %ul
+            %li.headline= link_to(story.headline, story.url)
+            %li.byline= story.byline
+            %li.last-published= story.last_published
+            %li.side-summary= story.summary
+  #footer
+

@@ -14,7 +14,7 @@ class GetStories
         url: story['url'],
         summary: story['summary'],
         image: image_url(story),
-        last_published: story['lastPublished']
+        last_published: story['lastPublished'].to_time.to_formatted_s(:short)
       })
     end
 
@@ -32,8 +32,10 @@ class GetStories
   end
 
   def image_url(story)
-    unless story['images'].empty?
-      story['images'][0]['types'][0]['content'] 
+    if story['images'].empty?
+      ''
+    else
+      "https://graphics8.nytimes.com/" + story['images'][0]['types'][0]['content']
     end
   end
 
