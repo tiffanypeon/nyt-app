@@ -1,14 +1,13 @@
 class GetStories
-  attr_reader :uri
+  IMAGE_URL = 'https://graphics8.nytimes.com/'
 
   def initialize(url)
     @uri = URI(url)
   end
 
   def call
-    stories = []
-    articles.each do |story|
-      stories << Story.new({
+    articles.map! do |story|
+      Story.new({
         headline: story['headline'],
         byline: story['byline'],
         url: story['url'],
@@ -17,8 +16,6 @@ class GetStories
         last_published: story['lastPublished'].to_time.to_formatted_s(:short)
       })
     end
-
-    stories
   end
 
   def parsed_response
@@ -26,6 +23,7 @@ class GetStories
   end
 
   private
+  attr_reader :uri
 
   def articles
     ArticleFilter.new(parsed_response).call
@@ -35,7 +33,7 @@ class GetStories
     if story['images'].empty?
       ''
     else
-      "https://graphics8.nytimes.com/" + story['images'][0]['types'][0]['content']
+      IMAGE_URL + story['images'][0]['types'][0]['content']
     end
   end
 

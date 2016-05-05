@@ -1,18 +1,18 @@
 class ArticleFilter
-  attr_accessor :response
-
   def initialize(response)
     @response = response
   end
 
   def call
-     #loop through collections and grab content that has type of 'Article'
+    #loop through collections and grab content that has type of 'Article'
     contents_with_assets.select do |content_details|
       content_details['type'] == 'Article'
     end
   end
 
-  #private
+  private
+  attr_accessor :response
+
   def collections_with_details
     response['content'].map do |content_block|
       unless content_block['collections'].empty?

@@ -1,8 +1,9 @@
 class StoriesController < ApplicationController
 
   def index
-    @full_stories = stories.select { |s| !s.image.empty? }
-    @other_stories = stories.select { |s| s.image.empty? }
+    @full_stories, @other_stories = stories.partition do |story|
+      story.image.present?
+    end
   end
 
   private
