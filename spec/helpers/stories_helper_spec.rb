@@ -1,15 +1,53 @@
 require 'rails_helper'
 
-# Specs in this file have access to a helper object that includes
-# the StoriesHelper. For example:
-#
-# describe StoriesHelper do
-#   describe "string concat" do
-#     it "concats two strings with spaces" do
-#       expect(helper.concat_strings("this","that")).to eq("this that")
-#     end
-#   end
-# end
 RSpec.describe StoriesHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:headline) { 'Texas woman Arrested in Connection With Ricin-Laced Letters' }
+  describe '.language' do
+    context 'with English language' do
+      let(:params) {{ language: 'English' }}
+
+      before { allow(helper).to receive(:params) { params } }
+
+      it 'returns Martian' do
+        expect(language).to eq 'Martian'
+      end
+    end
+
+    context 'with Martian language' do
+      let(:params) {{ language: 'Martian' }}
+
+      before { allow(helper).to receive(:params) { params } }
+
+      it 'returns English' do
+        expect(language).to eq 'English'
+      end
+    end
+  end
+
+  describe '.toggleable_text' do
+
+    context 'with English language' do
+      it 'leaves text as is' do
+        expect(toggleable_text(headline)).to match /Texas/
+      end
+    end
+
+    context 'with Martian language' do
+      let(:params) {{ language: 'Martian' }}
+
+      before { allow(helper).to receive(:params) { params } }
+
+      it 'leaves every word three characters or less alone' do
+        expect(toggleable_text(headline)).to match /in/
+      end
+
+     it 'replaces every word more than three characters with boinga ' do
+        expect(toggleable_text(headline)).to match /Boinga/
+     end
+
+      it 'maintains the same capitalization and punctuation' do
+        expect(toggleable_text(headline)).to match /Boinga-Boinga/
+      end
+    end
+  end
 end

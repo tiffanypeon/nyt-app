@@ -9,5 +9,4 @@ class Story
     @image = opts[:image]
     @last_published = opts[:last_published]
   end
-
 end

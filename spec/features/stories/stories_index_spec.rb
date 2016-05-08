@@ -7,6 +7,26 @@ feature 'As a visitor' do
     expect(page).to have_content 'Texas Woman Arrested in Connection With Ricin-Laced Letters'
   end
 
+  context 'choosing my language' do
+    scenario 'By default' do
+      visit stories_path
+      expect(page).to have_content 'For Puerto Ricans'
+    end
+
+    scenario 'I can change to martian language' do
+      visit stories_path
+      click_on 'Martian'
+      expect(page).to have_content 'boinga'
+    end
+
+    scenario 'I can change back to English' do
+      visit stories_path
+      click_on 'Martian'
+      click_on 'English'
+      expect(page).not_to have_content 'boinga'
+    end
+  end
+
   scenario 'Viewing older stories' do
     visit stories_path
     click_on 'Older stories'
