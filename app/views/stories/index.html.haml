@@ -2,8 +2,6 @@
   %header
     .nav
       %ul.topnav
-        %li Home
-        %li Newest Stories
         %li= link_to language, stories_path(language: language)
 
   #main
@@ -12,7 +10,7 @@
       - @full_stories.each_slice(2) do |stories|
         .row
           - stories.each do |story|
-            .col-6
+            .col-6.col-m-6
               %p.headline
                 = link_to(toggleable_text(story.headline), story.url)
               %p.byline
