@@ -27,9 +27,18 @@ feature 'As a visitor' do
     end
   end
 
-  scenario 'Viewing older stories' do
-    visit stories_path
-    click_on 'Older stories'
-    expect(page).to have_content 'Political Leaders Gather to Pay Tribute to Lautenberg'
+  describe 'Viewing older stories' do
+    scenario 'I can load older stories onto the page', js: true do
+      visit stories_path
+      click_on 'Older stories'
+      expect(page).to have_content 'Political Leaders Gather to Pay Tribute to Lautenberg'
+    end
+
+    scenario 'The stories will load in my language', js: true do
+      visit stories_path
+      click_on 'Martian'
+      click_on 'Older stories'
+      expect(page).not_to have_content 'Political Leaders Gather to Pay Tribute to Lautenberg'
+    end
   end
 end

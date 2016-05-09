@@ -6,10 +6,6 @@ class StoriesController < ApplicationController
     end
   end
 
-  def older
-
-  end
-
   private
 
   def stories

@@ -19,7 +19,7 @@ module StoriesHelper
   private
 
   def to_martian(text)
-    text.gsub(/[\w']{4,}/) do |word|
+    text.gsub(/[\w']{4,}/i) do |word|
       if word[0] == word[0].capitalize
         'Boinga'
       else

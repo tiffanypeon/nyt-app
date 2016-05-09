@@ -9,7 +9,7 @@
     .row
       .col-10
         - @full_stories.each_slice(2) do |stories|
-          .row
+          .row.full-stories
             - stories.each do |story|
               .col-6.col-m-6
                 %p.headline
@@ -26,7 +26,7 @@
                       = toggleable_text(story.summary)
       .col-2
         - @other_stories.each do |story|
-          .row
+          .row.stories-without-images
             %ul
               %li.headline= link_to(toggleable_text(story.headline), story.url)
               %li.byline= story.byline
@@ -34,7 +34,7 @@
               %li.side-summary= toggleable_text(story.summary)
   .row
     .col-12
-      = link_to 'Older stories', stories_older_path, remote: true, id: 'olderStories'
+      = link_to 'Older stories', '#', remote: true, id: 'olderStories'
 
   #footer
 

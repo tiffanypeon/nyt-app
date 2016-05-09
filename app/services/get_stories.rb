@@ -6,7 +6,7 @@ class GetStories
   end
 
   def call
-    articles.map! do |story|
+    articles.map do |story|
       Story.new({
         headline: story['headline'],
         byline: story['byline'],

@@ -1,0 +1,383 @@
+/* line 1, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+* {
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  /* line 7, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  /* line 14, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-m-1 {
+    width: 8.33%;
+  }
+
+  /* line 15, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-m-2 {
+    width: 16.66%;
+  }
+
+  /* line 16, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-m-3 {
+    width: 25%;
+  }
+
+  /* line 17, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-m-4 {
+    width: 33.33%;
+  }
+
+  /* line 18, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-m-5 {
+    width: 41.66%;
+  }
+
+  /* line 19, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-m-6 {
+    width: 50%;
+  }
+
+  /* line 20, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-m-7 {
+    width: 58.33%;
+  }
+
+  /* line 21, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-m-8 {
+    width: 66.66%;
+  }
+
+  /* line 22, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-m-9 {
+    width: 75%;
+  }
+
+  /* line 23, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-m-10 {
+    width: 83.33%;
+  }
+
+  /* line 24, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-m-11 {
+    width: 91.66%;
+  }
+
+  /* line 25, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-m-12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1150px) {
+  /* line 29, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-1 {
+    width: 8.33%;
+  }
+
+  /* line 30, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-2 {
+    width: 16.66%;
+  }
+
+  /* line 31, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-3 {
+    width: 25%;
+  }
+
+  /* line 32, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-4 {
+    width: 33.33%;
+  }
+
+  /* line 33, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-5 {
+    width: 41.66%;
+  }
+
+  /* line 34, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-6 {
+    width: 50%;
+  }
+
+  /* line 35, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-7 {
+    width: 58.33%;
+  }
+
+  /* line 36, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-8 {
+    width: 66.66%;
+  }
+
+  /* line 37, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-9 {
+    width: 75%;
+  }
+
+  /* line 38, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-10 {
+    width: 83.33%;
+  }
+
+  /* line 39, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-11 {
+    width: 91.66%;
+  }
+
+  /* line 40, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+  .col-12 {
+    width: 100%;
+  }
+}
+/* line 43, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+/* line 48, /Users/tpeon/code/nyt-app/app/assets/stylesheets/grid.css.scss */
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+/* line 1, /Users/tpeon/code/nyt-app/app/assets/stylesheets/navigation.css.scss */
+ul.topnav li.icon {
+  float: right;
+  display: inline-block;
+}
+
+/* Float the list items side by side */
+/* line 7, /Users/tpeon/code/nyt-app/app/assets/stylesheets/navigation.css.scss */
+ul.topnav li {
+  float: right;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: black;
+  padding-right: 30px;
+}
+
+/* Style the links inside the list items */
+/* line 16, /Users/tpeon/code/nyt-app/app/assets/stylesheets/navigation.css.scss */
+ul.topnav li a {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of links on hover */
+/* line 27, /Users/tpeon/code/nyt-app/app/assets/stylesheets/navigation.css.scss */
+ul.topnav li a:hover {
+  background-color: #111;
+  color: white;
+}
+/* Reset
+ ------------------------------------------------------------ */
+/* line 4, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 5, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* line 6, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+body {
+  background: #ffffff;
+  font-size: 13px;
+  color: #666666;
+  font-family: 'timelessregular', helvetica, sans-serif;
+}
+
+/* line 13, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+ol, ul {
+  list-style: none;
+  margin: 0;
+}
+
+/* line 18, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+ul li {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+/* line 24, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+h1 {
+  margin-bottom: 10px;
+  color: #111111;
+}
+
+/* line 29, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+.headline a {
+  color: #000;
+  font-size: 1.25rem;
+  line-height: 1.375rem;
+  letter-spacing: .01em;
+  word-spacing: -.1em;
+  text-decoration: none;
+  font-family: 'timelessbold';
+  font-style: italic;
+}
+
+/* line 40, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+.byline {
+  font-size: 0.625rem;
+  line-height: .75rem;
+  font-family: georgia, 'times new roman', times, serif;
+  color: #999;
+  margin: 4px 0 1px;
+}
+
+/* line 48, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+.last-published {
+  font-size: 0.625rem;
+  line-height: 0.6875rem;
+  font-weight: 400;
+  font-style: normal;
+  margin-left: 0.1em;
+  color: #a81817;
+  white-space: nowrap;
+}
+
+/* line 58, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+side-summary {
+  font-size: 0.8125rem;
+  line-height: 18px;
+  line-height: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+  font-family: georgia,"times new roman",times,serif;
+}
+
+/* line 67, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+img {
+  outline: none;
+  border: none;
+}
+
+/* line 72, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+p {
+  margin: 0 0 10px;
+  line-height: 1.4em;
+  font-size: 1.2em;
+}
+
+/* line 78, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* line 83, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+aside {
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+/* line 89, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 93, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+#wrapper {
+  width: 96%;
+  max-width: 1335px;
+  margin: auto;
+  padding: 2%;
+}
+
+/* line 100, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+#main {
+  padding-top: 10px;
+  width: 95%;
+  margin-right: 5%;
+  float: left;
+}
+
+/* line 107, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+.page-title {
+  font-size: 30px;
+  font-family: 'timelessbold';
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* line 117, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+.story-info img {
+  display: inline;
+  max-height: 150px;
+}
+
+/* line 122, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+aside {
+  width: 32%;
+  float: right;
+  background: #fae1bd;
+  padding: 1%;
+}
+
+/* line 129, /Users/tpeon/code/nyt-app/app/assets/stylesheets/stories.css.scss */
+footer {
+  float: left;
+  clear: left;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  height: auto;
+  border-top: 3px solid #da000e;
+  padding-top: 1%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+
+@font-face {
+    font-family: 'timelessregular';
+    src: url('timeless-webfont.eot');
+    src: url('timeless-webfont.eot?#iefix') format('embedded-opentype'),
+         url('timeless-webfont.woff2') format('woff2'),
+         url('timeless-webfont.woff') format('woff'),
+         url('timeless-webfont.ttf') format('truetype'),
+         url('timeless-webfont.svg#timelessregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'timelessbold';
+    src: url('timeless-bold-webfont.eot');
+    src: url('timeless-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('timeless-bold-webfont.woff2') format('woff2'),
+         url('timeless-bold-webfont.woff') format('woff'),
+         url('timeless-bold-webfont.ttf') format('truetype'),
+         url('timeless-bold-webfont.svg#timelessbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
