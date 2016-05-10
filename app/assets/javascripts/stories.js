@@ -132,6 +132,10 @@ function languageParam() {
   url = window.location.href;
   var regex = new RegExp("[?&]language(=([^&#]*)|&|#|$)"),
       results = regex.exec(url);
-  return decodeURIComponent(results[2].replace(/\+/g, " "));
+  if (results == null) {
+    ''
+  } else {
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  }
 }
 
