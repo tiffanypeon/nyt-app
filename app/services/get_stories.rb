@@ -1,5 +1,5 @@
 class GetStories
-  IMAGE_URL = 'https://graphics8.nytimes.com/'
+  IMAGE_URL = '//graphics8.nytimes.com/'
 
   def initialize(url)
     @uri = URI(url)
