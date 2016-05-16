@@ -4,7 +4,6 @@ feature 'As a visitor' do
   scenario 'I can see the title of an article' do
     visit stories_path
     expect(page).to have_content 'For Puerto Ricans, a Parade of Doubts'
-    expect(page).to have_content 'Texas Woman Arrested in Connection With Ricin-Laced Letters'
   end
 
   context 'choosing my language' do
@@ -14,6 +13,7 @@ feature 'As a visitor' do
     end
 
     scenario 'I can change to martian language' do
+      binding.pry
       visit stories_path
       click_on 'Martian'
       expect(page).to have_content 'boinga'
@@ -28,6 +28,14 @@ feature 'As a visitor' do
   end
 
   describe 'Viewing older stories' do
+    before do
+      WebMock.disable!
+    end
+
+    after do
+      WebMock.enable!
+    end
+
     scenario 'I can load older stories onto the page', js: true do
       visit stories_path
       click_on 'Older stories'

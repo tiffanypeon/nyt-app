@@ -1,0 +1,261 @@
+{
+  "page": {
+    "parameters": {
+      "pubDate": "2013-06-07 00:00:00.0",
+      "PublishFile": "/indexes/2013/06/07/nyregion/index.html",
+      "FileName": "100000002251900-nyregion.xml",
+      "displayName": "N.Y. / Region",
+      "title": "New York Region News",
+      "description": "Breaking news from the New York Region including New York City, Westchester, Long Island, New Jersey and Connecticut.     ",
+      "template": "SectionFront3Col",
+      "adSensitivity": "No Sensitivity",
+      "sectionName_json": "[\"nyregion\"]",
+      "sectionDisplayName_json": "[\"N.Y. \\/ Region\"]",
+      "keywords": "jobs in new york,new york bed and breakfasts,New york city colleges,new york city dating,new york city jobs,new york city restaurants,new york city singles,new york giants,new york jets,new york jobs,new york personals,new york politics,new york schools,new york state,employment,new york subway map,new york web design,new york web hosting,new york yankees,nyc dating,nyc restaurants,nyu,web site design new york,new york mets,new york knicks",
+      "masthead_URL": "http://www.nytimes.com/pages/nyregion/index.html",
+      "PublishFileRSS": "http://www.nytimes.com/services/xml/rss/nyt/NYRegion.xml",
+      "lastPublished": "2013-06-07T14:30:04.004.EDT",
+      "headline": "",
+      "tinyUrl": "http://nyti.ms/15qzody"
+    },
+    "content": [
+      {
+        "name": "SpanABTop",
+        "rank": 1,
+        "parameters": {},
+        "collections": [
+          {
+            "id": 89137751,
+            "name": "Collection588506697",
+            "renderStyle": "Simple",
+            "rank": 1,
+            "excludedFromFeed": false,
+            "parameters": {
+              "kicker": " "
+            },
+            "assets": []
+          }
+        ]
+      },
+      {
+        "name": "aColumn",
+        "rank": 2,
+        "parameters": {},
+        "collections": [
+          {
+            "id": 89204311,
+            "name": "Collection943593067",
+            "renderStyle": "LedeStory395",
+            "rank": 1,
+            "excludedFromFeed": false,
+            "parameters": {
+              "kicker": " "
+            },
+            "assets": [
+              {
+                "dateline": "",
+                "hasComment": true,
+                "id": 100000002264788,
+                "slugname": "08parade",
+                "rank": 1,
+                "type": "Article",
+                "typeOfMaterial": "News",
+                "renderStyle": "",
+                "lastPublished": "2013-06-07T11:09:19.019.EDT",
+                "lastFileGenerated": "2013-06-07T14:10:17.017.EDT",
+                "showTimestamp": true,
+                "headline": "For Puerto Ricans, a Parade of Doubts",
+                "original_headline": "For Puerto Ricans, a Parade of Doubts",
+                "subheadline": "",
+                "kicker": "",
+                "byline": "By WINNIE HU",
+                "url": "http://www.nytimes.com/2013/06/08/nyregion/as-puerto-rican-parade-grows-so-do-complaints.html",
+                "xmlNode": {
+                  "source": "scoop",
+                  "content": "/data/cms/publish/article/2013/06/08/nyregion/100000002264788-08parade.xml"
+                },
+                "summary": "Organizers of New Yorkâ€™s Puerto Rican Day Parade, which has attracted a fleet of corporate sponsors, are facing scrutiny over how they manage the event and the money it generates.",
+                "original_summary": "Organizers of New Yorkâ€™s Puerto Rican Day Parade, which has attracted a fleet of corporate sponsors, are facing scrutiny over how they manage the event and the money it generates.",
+                "comment_display": "",
+                "desk": "Metro",
+                "sectionName": {
+                  "type": "json",
+                  "content": "[\"nyregion\"]"
+                },
+                "indexing_terms": [
+                  {
+                    "type": "des",
+                    "content": "Puerto Ricans"
+                  },
+                  {
+                    "type": "des",
+                    "content": "Parades"
+                  },
+                  {
+                    "type": "mdes",
+                    "content": "Nonprofit Organizations"
+                  },
+                  {
+                    "type": "nyt_geo",
+                    "content": "Manhattan (NYC)"
+                  }
+                ],
+                "images": [
+                  {
+                    "id": 100000002268057,
+                    "name": "parade-2",
+                    "rank": 1,
+                    "show": true,
+                    "types": [
+                      {
+                        "type": "square320",
+                        "width": 320,
+                        "height": 320,
+                        "content": "images/2013/06/08/nyregion/parade-2/parade-2-square320.jpg"
+                      },
+                      {
+                        "type": "thumbStandard",
+                        "width": 75,
+                        "height": 75,
+                        "content": "images/2013/06/08/nyregion/parade-2/parade-2-thumbStandard.jpg"
+                      }
+                    ],
+                    "credit": "Eric Thayer for The New York Times",
+                    "caption": "The Puerto Rican Day Parade has grown into a star-studded televised extravaganza in the heart of Manhattan, with 80,000 marchers from around the country and Puerto Rico.",
+                    "kicker": "",
+                    "headline": "For Puerto Ricans, a Parade of Doubts",
+                    "summary": "Organizers of New Yorkâ€™s Puerto Rican Day Parade, which has a fleet of corporate sponsors, are facing scrutiny over how they manage the event and the money it generates.",
+                    "refers": [
+                      {
+                        "rank": 1,
+                        "show": false,
+                        "showAsFooter": false,
+                        "content": "<![CDATA[<span class=\"commentCountLink\" articleid=\"http://http://www.nytimes.com/2013/06/08/nyregion/as-puerto-rican-parade-grows-so-do-complaints.html\" overflowurl=\"http://community.nytimes.com/comments/http://www.nytimes.com/2013/06/08/nyregion/as-puerto-rican-parade-grows-so-do-complaints.html\"></span>]]>"
+                      }
+                    ]
+                  }
+                ],
+                "relatedContent": [],
+                "refers": [],
+                "parameters": {},
+                "publicationDt": "2013-06-08T00:00:00.000.EDT"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "bColumn",
+        "rank": 3,
+        "parameters": {},
+        "collections": [
+          {
+            "id": 89189092,
+            "name": "Collection970493956",
+            "renderStyle": "WideThumb",
+            "rank": 2,
+            "excludedFromFeed": false,
+            "parameters": {
+              "kicker": " Cicada Watch"
+            },
+            "assets": [
+              {
+                "dateline": "",
+                "externalId": "58_458843",
+                "xmlNodeBlog": {
+                  "source": "scoop",
+                  "content": "/data/cms/publish/blogpost/2013/06/03/nyregion/100000002260149-03cityroom-ask-about-the-17-year-cicada.xml"
+                },
+                "id": 100000002260149,
+                "slugname": "03cityroom-ask-about-the-17-year-cicada",
+                "rank": 1,
+                "type": "BlogPost",
+                "typeOfMaterial": "News",
+                "renderStyle": "",
+                "lastPublished": "2013-06-04T07:12:34.034.EDT",
+                "lastFileGenerated": "2013-06-06T00:49:15.015.EDT",
+                "showTimestamp": true,
+                "blogName": "City Room",
+                "headline": "Ask About the 17-Year Cicada",
+                "original_headline": "Ask About the 17-Year Cicada",
+                "subheadline": "",
+                "kicker": "City Room",
+                "byline": "By THE NEW YORK TIMES",
+                "url": "http://cityroom.blogs.nytimes.com/2013/06/03/ask-about-the-17-year-cicada/",
+                "xmlNode": {
+                  "source": "blog",
+                  "content": "http://cityroom.blogs.nytimes.com/2013/06/03/ask-about-the-17-year-cicada/xml"
+                },
+                "summary": "An entomologist from the American Museum of Natural History is accepting questions from City Room readers about the insects, which are now emerging from underground.",
+                "original_summary": "An entomologist from the American Museum of Natural History is accepting questions from City Room readers about the insects, which are now emerging from underground.",
+                "sectionName": {
+                  "type": "json",
+                  "content": "[\"nyregion\"]"
+                },
+                "indexing_terms": [],
+                "images": [
+                ],
+                "refers": [
+                  {
+                    "rank": 1,
+                    "show": true,
+                    "showAsFooter": false,
+                    "content": "<![CDATA[<a href=\"http://www.nytimes.com/video/2013/06/02/science/100000002258320/clarinet-with-cicada-chorus.html\"><span class=\"icon video\">Video</span>: Clarinet, With Cicadas</a>\n]]>"
+                  }
+                ],
+                "parameters": {},
+                "publicationDt": "2013-06-03T15:27:34.034.EDT"
+              },
+              {
+                "showPopup": false,
+                "popupWidth": 0,
+                "popupHeight": 0,
+                "id": 100000002213957,
+                "slugname": "a-century-of-cicadas",
+                "rank": 2,
+                "type": "InteractiveGraphics",
+                "typeOfMaterial": "Multimedia Feature",
+                "renderStyle": "",
+                "lastPublished": "2013-06-05T13:04:39.039.EDT",
+                "lastFileGenerated": "2013-06-05T13:04:39.039.EDT",
+                "showTimestamp": false,
+                "headline": "A Century of Cicadas",
+                "original_headline": "A Century of Cicadas",
+                "kicker": "",
+                "url": "http://www.nytimes.com/interactive/science/a-century-of-cicadas.html",
+                "xmlNode": {
+                  "content": "/data/cms/publish/multimedia/interactivegraphics/science/100000002213957-a-century-of-cicadas.xml"
+                },
+                "summary": "Periodical cicadas live underground for 17 or 13 years before emerging to sing, mate and die. This yearâ€™s cicadas are Brood II, one of 15 surviving regional broods.",
+                "original_summary": "Periodical cicadas live underground for 17 or 13 years before emerging to sing, mate and die. This yearâ€™s cicadas are Brood II, one of 15 surviving regional broods.",
+                "sectionName": {
+                  "type": "json",
+                  "content": "[\"science\"]"
+                },
+                "indexing_terms": [
+                  {
+                    "type": "des",
+                    "content": "Cicadas (Insects)"
+                  }
+                ],
+                "images": [
+                ],
+                "relatedContent": [],
+                "refers": [
+                  {
+                    "rank": 1,
+                    "show": true,
+                    "showAsFooter": false,
+                    "content": "<![CDATA[<a href=\"http://www.nytimes.com/2013/06/04/science/one-place-cicadas-get-a-warm-welcome.html\">Related Article</a>]]>"
+                  }
+                ],
+                "parameters": {}
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "id": 100000002251900
+  }
+}
