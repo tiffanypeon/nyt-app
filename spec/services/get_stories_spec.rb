@@ -7,7 +7,7 @@ RSpec.describe GetStories do
 
   describe '.call' do
     it 'returns an array of story objects' do
-      expect(get_stories.call[1].headline).to eq story.headline
+      expect(get_stories.call[0].headline).to eq story.headline
     end
   end
 

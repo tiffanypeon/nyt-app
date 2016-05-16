@@ -13,7 +13,6 @@ feature 'As a visitor' do
     end
 
     scenario 'I can change to martian language' do
-      binding.pry
       visit stories_path
       click_on 'Martian'
       expect(page).to have_content 'boinga'

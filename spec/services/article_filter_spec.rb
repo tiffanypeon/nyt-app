@@ -1,16 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe ArticleFilter do 
-  describe '.call' do 
+RSpec.describe ArticleFilter do
+  let(:network_response) { File.read(Rails.root.join('spec/stubbed_responses/newest_articles.json')) }
+  let(:parsed_response) { JSON.parse(network_response)['page'] }
 
-    #TODO - stub this obj and pull response into network stub to remove :send smell
-    url = 'http://np-ec2-nytimes-com.s3.amazonaws.com/dev/test/nyregion2.js'
-    parsed_response = GetStories.new(url).send(:parsed_response)
+  describe '.call' do
+    let(:article_filter) { ArticleFilter.new(parsed_response) }
 
-    article_filter = ArticleFilter.new(parsed_response)
-
-    it 'returns an array of stories' do
-      expect(article_filter.call.size).to eq 19
+    it 'returns an array of articles' do
+      expect(article_filter.call.size).to eq 2
     end
   end
 
