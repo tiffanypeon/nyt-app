@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe StoriesController, type: :controller do
+RSpec.describe StoriesController do
 
   describe '#index' do
     describe 'html response' do

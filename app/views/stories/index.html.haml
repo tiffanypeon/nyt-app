@@ -17,10 +17,10 @@
                 %p.byline
                   = story.byline
                 %p.last-published
-                  = story.last_published
+                  = story.publish_date
                 .row.story-info
                   .col-5
-                    = image_tag(story.image)
+                    = image_tag(story.image_url)
                   .col-7
                     %p.summary
                       = toggleable_text(story.summary)
@@ -30,11 +30,9 @@
             %ul
               %li.headline= link_to(toggleable_text(story.headline), story.url)
               %li.byline= story.byline
-              %li.last-published= story.last_published
+              %li.last-published= story.publish_date
               %li.side-summary= toggleable_text(story.summary)
   .row
     .col-12
-      = link_to 'Older stories', '#', remote: true, id: 'olderStories'
-
-  #footer
+      = link_to 'Older stories', '#', remote: true, id: 'olderStories', class: 'older-stories'
 

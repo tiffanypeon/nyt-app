@@ -26,6 +26,17 @@ feature 'As a visitor' do
     end
   end
 
+  context 'if a network request fails' do
+    before do
+      allow(GetStories).to receive(:call).and_raise 'Error!'
+    end
+
+    scenario 'I see a branded error page' do
+      visit stories_path
+      expect(page).to have_content 'Oops! Something went wrong'
+    end
+  end
+
   describe 'Viewing older stories' do
     before do
       WebMock.disable!

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Story, type: :model do
+RSpec.describe Story do
   it { should respond_to :headline }
   it { should respond_to :byline }
   it { should respond_to :url }

@@ -4,7 +4,7 @@ $(function() {
   $olderStories.on('click', function(){
     jQuery.ajax({
       url: 'http://np-ec2-nytimes-com.s3.amazonaws.com/dev/test/nyregion.js',
-      contentType: 'application/javascript',
+      contentType: "application/json; charset=utf-8",
       dataType: "jsonp",
       type: "GET",
    });
@@ -45,10 +45,9 @@ NYTD = {
     NYTD.appendStory(firstStoryDiv);
 
     _.each(NYTD.groupedStories(stories), function(story, index){
-      var otherStoriesDiv = document.createElement('div');
-      otherStoriesDiv.className = 'row'
-      otherStoriesDiv.appendChild(NYTD.generateDiv(story[0]))
-      otherStoriesDiv.appendChild(NYTD.generateDiv(story[1]))
+      var otherStoriesDiv = $("<div/>", { class: 'row' });
+      otherStoriesDiv.append(NYTD.generateDiv(story[0]))
+      otherStoriesDiv.append(NYTD.generateDiv(story[1]))
 
       NYTD.appendStory(otherStoriesDiv);
     })
@@ -58,11 +57,21 @@ NYTD = {
     return {
       url: story.url,
       byline: story.byline,
-      headline: NYTD.toggleableText(story.headline),
-      lastPublished: story.lastPublished,
+      headline: unescapeHTML(NYTD.toggleableText(story.headline)),
+      lastPublished: NYTD.formattedDate(story.lastPublished),
       image: NYTD.storyImage(story.images[0]),
       summary: NYTD.toggleableText(story.summary)
     }
+  },
+
+  formattedDate: function(dateString) {
+    var splitDate = dateString.split('.');
+    var date = new Date(splitDate[0]);
+    var month = date.getMonth();
+    var day = date.getDate();
+    var year = date.getFullYear();
+
+    return(month + '/' + day + '/' + year);
   },
 
   storyImage: function(images) {
@@ -72,20 +81,21 @@ NYTD = {
   },
 
   generateDiv: function(story) {
-    var div = document.createElement('div');
-    div.className = 'col-6 col-m-6';
+    var div = $("<div/>", { class: 'col-6 col-m-6' });
     var innerDiv = _.template("<p class='headline'><a href=<%- url %>><%- headline %></a></p><p class='byline'><%- byline %></p><p class='last-published'><%- lastPublished %></p><div class='row story-info'><div class='col-5'><img src=<%- image %>></img></div><div class='col-7'><p class='summary'><%- summary %></p></div></div>");
     var article = innerDiv(NYTD.storyParams(story));
-    div.innerHTML = article;
+
+    div.append(article);
     return div
   },
 
   displaySideStories: function(stories) {
     _.each(stories, function(story){
-      var div = document.createElement('div');
-      var innerDiv = _.template("<ul><li class='headline'><a href=<%- url %>><%- headline %></a></li><li class='byline'><%- byline %></li><li class='lastPublished'><%- lastPublished %></li><li class='row story-info'></li><li class='side-summary'><%- summary %></li>");
+      var div = $("<div/>");
+      var innerDiv = _.template("<ul><li class='headline'><a href=<%- url %>><%- headline %></a></li><li class='byline'><%- byline %></li><li class='last-published'><%- lastPublished %></li><li class='row story-info'></li><li class='side-summary'><%- summary %></li>");
+
       var article = innerDiv(NYTD.storyParams(story))
-      div.innerHTML = article;
+      div.append(article);
 
       $('.stories-without-images').last().append(div);
     })
@@ -138,4 +148,22 @@ NYTD = {
       return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
   }
+}
+
+var escapeChars = { lt: '<', gt: '>', quot: '"', apos: "'", amp: '&' };
+
+function unescapeHTML(str) {//modified from underscore.string and string.js
+  return str.replace(/\&([^;]+);/g, function(entity, entityCode) {
+    var match;
+
+    if ( entityCode in escapeChars) {
+        return escapeChars[entityCode];
+    } else if ( match = entityCode.match(/^#x([\da-fA-F]+)$/)) {
+        return String.fromCharCode(parseInt(match[1], 16));
+    } else if ( match = entityCode.match(/^#(\d+)$/)) {
+        return String.fromCharCode(~~match[1]);
+    } else {
+        return entity;
+    }
+  });
 }

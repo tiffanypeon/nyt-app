@@ -1,28 +1,13 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# NYT code test
 
-Things you may want to cover:
+## Running this app locally:
+  - Make sure you're using Ruby version 2.0 or higher (developed on Ruby 2.3)
+  - Run `Bundle install`
+  - There's no database for this app, so skip rake db:create/migrate step
+  - Run `rails s` to run the app locally
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Running the test suite:
+  - Run `bundle install` if you haven't already
+  - Run `bundle exec` to run all tests

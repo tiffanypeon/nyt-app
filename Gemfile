@@ -1,13 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.11'
+gem 'rails', '4.2.6'
 gem 'sass-rails', '~> 4.0.3'
-gem 'jquery-rails'
+gem 'jquery-rails', '4.1.1'
 gem 'haml-rails', '~> 0.9'
-gem 'underscore-rails'
+gem 'underscore-rails', '1.8.3'
 
 group :development do
   gem 'spring'
+  gem 'pry-rails'
 end
 
 group :test do
